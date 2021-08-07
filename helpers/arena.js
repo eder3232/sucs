@@ -29,6 +29,14 @@ export default function arena(data) {
         clasificacion.grupo = 'SW - SC'
       }
     } else if (data.cu < 6 || data.cc < 1 || data.cc > 3) {
+      //SP...
+      if (data.ip < 4 || data.ip < 0.73 * data.ll - 20) {
+        //SP - SM
+        clasificacion.grupo = 'SP - SM'
+      } else if (data.ip > 7 && data.ip >= 0.73 * data.ll - 20) {
+        //SP - SC
+        clasificacion.grupo = 'SP - SC'
+      }
     }
   }
   return clasificacion
