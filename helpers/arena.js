@@ -3,20 +3,32 @@ export default function arena(data) {
   if (data.fraccionFina < 5) {
     //arenas limpias
     if (data.cu >= 6 && data.cc >= 1 && data.cc <= 3) {
-      //sw
+      //SW
       clasificacion.grupo = 'SW'
     } else if (data.cu < 6 || data.cc < 1 || data.cc > 3) {
-      //sp
+      //SP
       clasificacion.grupo = 'SP'
     }
   } else if (data.fraccionFina > 12) {
     //arenas con finos
     if (data.ip < 4 || data.ip < 0.73 * data.ll - 20) {
-      //sm
+      //SM
       clasificacion.grupo = 'SM'
     } else if (data.ip > 7 && data.ip >= 0.73 * data.ll - 20) {
-      //sc
+      //SC
       clasificacion.grupo = 'SC'
+    }
+  } else if (data.fraccionFina >= 5 && data.fraccionFina <= 12) {
+    if (data.cu >= 6 && data.cc >= 1 && data.cc <= 3) {
+      //SW...
+      if (data.ip < 4 || data.ip < 0.73 * data.ll - 20) {
+        //SW - SM
+        clasificacion.grupo = 'SW - SM'
+      } else if (data.ip > 7 && data.ip >= 0.73 * data.ll - 20) {
+        //SW - SC
+        clasificacion.grupo = 'SW - SC'
+      }
+    } else if (data.cu < 6 || data.cc < 1 || data.cc > 3) {
     }
   }
   return clasificacion
