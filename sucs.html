@@ -4,11 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sucs.css" />
     <title>SUCS</title>
   </head>
   <body>
     <main>
       <h1>SUCS</h1>
+      <form action="">
+        <p>Retenido en la malla #4</p>
+        <input type="number" name="retenido #4" id="ret4" />
+        <p>Retenido en la malla #200</p>
+        <input type="number" name="retenido #200" id="ret200" />
+        <p>El suelo es organico?</p>
+        No
+        <input type="checkbox" name="No" id="organico1" checked="true" />
+        Si
+        <input type="checkbox" name="Si" id="organico2" />
+        <br />
+        <p>Coeficiente de uniformidad</p>
+        <input type="number" name="cu" id="cu" placeholder="cu" />
+        <p>Coeficiente de curvatura</p>
+        <input type="number" name="cc" id="cc" placeholder="cc" />
+        <p>Limite liquido</p>
+        <input type="number" name="ll" id="ll" placeholder="ll" />
+        <p>Limite plastico</p>
+        <input type="number" name="lp" id="lp" placeholder="lp" />
+      </form>
+      <button id="clasificar">Clasificar</button>
+      <p id="resultado"></p>
     </main>
 
     <script src="./sucs.js" type="module"></script>
