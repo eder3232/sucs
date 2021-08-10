@@ -9,6 +9,32 @@ input::-webkit-inner-spin-button {
   padding: 0;
 }
 
+body {
+  background-color: darkgray;
+}
+
 main {
+  width: 235px;
+  margin: 20px auto;
   padding: 20px;
+  background-color: cyan;
+}
+
+.divResultado {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#clasificar {
+  padding: 10px;
+  margin: 10px;
+}
+
+#resultado {
+  color: rgb(0, 81, 255);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
